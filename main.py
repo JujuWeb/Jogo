@@ -15,7 +15,7 @@ pygame.display.set_caption("Caos IFinito")
 
 spritesheet = pygame.image.load(os.path.join(DIRETORIO_IMAGENS, "spritesheet.png")).convert_alpha()
 img_menu = pygame.image.load(os.path.join(DIRETORIO_IMAGENS, "menu.png")).convert()
-img_jogo = pygame.image.load(os.path.join(DIRETORIO_IMAGENS, "branco.png")).convert()
+img_jogo = pygame.image.load(os.path.join(DIRETORIO_IMAGENS, "floresta (2).png")).convert()
 
 relogio = pygame.time.Clock()
 
