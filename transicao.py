@@ -3,17 +3,18 @@ from aparencia import PRETO
 
 class Transicao:
     @staticmethod
-    def fade_in_from_black(tela, novo_cenario, cor = PRETO, duracao=800):
+    def fade_in(tela, troca, cor = PRETO, duracao=800):
+
         clock = pygame.time.Clock()
-        fade = pygame.Surface(tela.get_size()).convert()
+        fade = pygame.Surface((960, 540)).convert()
         fade.fill(cor)
         alpha = 255
-        decremento = 255 / (duracao / 16.67) 
+        transparencia = 255 / 51
 
         while alpha > 0:
-            tela.blit(novo_cenario, (0, 0))      
-            fade.set_alpha(int(alpha))
+            tela.blit(troca, (0, 0))      
+            fade.set_alpha((alpha))
             tela.blit(fade, (0, 0))       
             pygame.display.update()
             clock.tick(60)
-            alpha -= decremento
+            alpha -= transparencia
