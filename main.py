@@ -47,8 +47,8 @@ while True:
                 all_sprites.draw(tela)
                 pygame.display.flip()
 
-                novo_cenario = tela.copy()
-                Transicao.fade_in_from_black(tela, novo_cenario)
+                troca = tela.copy()
+                Transicao.fade_in(tela, troca)
 
         elif tela_atual == "jogo":
             if evento.type == KEYDOWN:
